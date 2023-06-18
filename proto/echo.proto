@@ -1,0 +1,11 @@
+syntax = "proto3";
+package test;
+option go_package = "github.com/grpc";
+
+service EchoService {
+  rpc echo(StringMessage) returns (StringMessage);
+}
+
+message StringMessage {
+  string value = 1;
+}
